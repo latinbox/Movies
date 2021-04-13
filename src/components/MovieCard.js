@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Image, View, StyleSheet, Text, Animated} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-//import Rating from './Rating';
+import Rating from './Rating';
 import MovieImage from './MovieImage';
 import MovieFullScreenImage from './MovieFullScreenImage';
 
@@ -105,7 +105,7 @@ export default class MovieCard extends Component {
           imageOnLongPress={this.toggleFullScreenImage}
         />
         <Text style={[styles.name, styles.textColor]}>{title}</Text>
-        {/* <View style={styles.subtitle}>
+       <View style={styles.subtitle}>
           <Text style={[styles.description, styles.textColor]}>{year}</Text>
           <Rating
             star
@@ -116,10 +116,10 @@ export default class MovieCard extends Component {
           <Text style={[styles.description, styles.textColor, styles.rating]}>
             {imdbRating}
           </Text>
-        </View> */}
-        {/* <View style={styles.heart}>
+        </View>
+        <View style={styles.heart}>
           <Rating heart like={like} ratingPress={this.toggleLike} />
-        </View> */}
+        </View>
       </Animated.View>
     );
   }
